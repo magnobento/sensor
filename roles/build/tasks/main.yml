@@ -1,0 +1,12 @@
+- name: Create sensor directory
+  file:
+    path: /opt/sensor
+    state: directory
+    owner: sensor
+    group: sensor
+    mode: '0755'
+
+- name: Create validation file
+  file:
+    path: /opt/sensor/ansible-role-was-here.txt
+    state: touch
